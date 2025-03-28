@@ -14,5 +14,5 @@ toggleMenu.addEventListener('click', e => {
     }
 
     document.querySelector('.menu-wrap').style.visibility = visibility;
-    document.querySelector('.menu-wrap').style.maxHeight = maxHeight;
+    document.querySelector('.menu-wrap').style.maxHeight = `${maxHeight}px`;
 });
