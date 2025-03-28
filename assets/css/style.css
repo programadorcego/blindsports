@@ -98,6 +98,7 @@ h6 {
 
     .main-menu .menu-wrap {
         visibility: visible;
+        min-height: 1.125rem;
         max-height: auto;
     }
 
