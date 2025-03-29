@@ -6,6 +6,10 @@
 
 :root {
     font-size: 16px;
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --tertiary-color: #00CED1;
+    --fourth-color: #FF7F00;
 }
 
 html, body {
@@ -19,8 +23,8 @@ body {
     align-items: flex-start;
     justify-content: flex-start;
     font-size: 1rem;
-    background: #ffffff;
-    color: #000000;
+    background: var(--secondary-color);
+    color: var(--primary-color);
     line-height: 1.5;
 }
 
@@ -79,7 +83,7 @@ h6 {
 
 .main-menu {
     font-size: 1.25rem;
-    background-color: #00CED1;
+    background-color: var(--tertiary-color);
 }
 
 .main-menu .menu-wrap {
@@ -124,7 +128,7 @@ width: 100%;
 }
 
 .main-menu a {
-    color: #000;
+    color: var(--primary-color);
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -132,5 +136,5 @@ width: 100%;
 button,
 .main-menu .active > a,
 .main-menu a:hover {
-    background-color: #FF7F00;
+    background-color: var(--fourth-color);
 }
