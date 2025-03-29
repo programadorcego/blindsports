@@ -12,7 +12,8 @@
     --fourth-color: #FF7F00;
 }
 
-html, body {
+html,
+body {
     width: 100vw;
     min-height: 100vh;
 }
@@ -28,7 +29,24 @@ body {
     line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6 {
+.high-contrast,
+.high-contrast * {
+    background-color: black !important;
+    color: yellow !important;
+    filter: contrast(2) brightness(1.2);
+}
+
+.high-contrast a,
+.high-contrast * a {
+    color: cyan !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     line-height: 1.2;
 }
 
@@ -62,6 +80,7 @@ h6 {
     justify-content: flex-start;
     align-items: flex-start;
 }
+
 @media all and (min-width: 1200px) {
     .container {
         width: 1200px;
@@ -75,6 +94,7 @@ h6 {
     align-items: flex-start;
     width: 100vw;
 }
+
 @media all and (min-width: 1200px) {
     .main-header {
         align-items: center;
@@ -101,6 +121,7 @@ h6 {
     align-items: flex-start;
     gap: 20px;
 }
+
 @media all and (min-width: 1200px) {
     .main-menu {
         font-size: 1.125rem;
@@ -118,8 +139,8 @@ h6 {
 
     .main-menu ul {
         flex-direction: row;
-flex-wrap: wrap;
-width: 100%;
+        flex-wrap: wrap;
+        width: 100%;
     }
 
     .main-menu li {
@@ -134,7 +155,7 @@ width: 100%;
 }
 
 button,
-.main-menu .active > a,
+.main-menu .active>a,
 .main-menu a:hover {
     background-color: var(--fourth-color);
 }
