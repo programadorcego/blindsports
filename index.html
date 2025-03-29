@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blind Sports</title>
 
+    <link rel="stylesheet" href="assets/css/carousel.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body   >
+<body>
     <header class="main-header">
         <div class="container">
             <div class="accessibility-controls">
@@ -42,6 +43,42 @@
         </nav>
     </header>
 
+    <main>
+        <div class="carousel" role="region">
+            <div class="carousel-container">
+                <figure class="carousel-slide">
+                    <img src="ciclismo.jpg" alt="Ciclistas competindo em uma corrida">
+
+                    <figcaption class="slide-caption" aria-live="polite">
+                        🚴 Apoie nossos ciclistas! Doe ou seja voluntário.
+                    </figcaption>
+                </figure>
+
+                <figure class="carousel-slide">
+                    <img src="skate.jpg" alt="Skatistas realizando manobras em pista urbana">
+
+                    <figcaption class="slide-caption">
+                        🛹 O skate transforma vidas! Participe como voluntário.
+                    </figcaption>
+                </figure>
+
+                <figure class="carousel-slide">
+                    <img src="patinacao.jpg" alt="Patinadores treinando em pista ao ar livre">
+
+                    <ficaption class="slide-caption">
+                        ⛸️ A patinação também é inclusão! Ajude a crescer.
+                    </ficaption>
+                </figure>
+            </div>
+
+            <div class="carousel-controls">
+                <button class="carousel-prev" aria-label="Imagem anterior">&lt;</button>
+                <button class="carousel-next" aria-label="Próxima imagem">&gt;</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/carousel.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 
