@@ -7,10 +7,12 @@
     <title>Blind Sports</title>
 
     <link rel="stylesheet" href="assets/css/carousel.css">
+    <link rel="stylesheet" href="assets/css/hero.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+    <span class="sr-only"><a href="#main">Pular para o conteúdo principal</a></span>
     <header class="main-header">
         <div class="container">
             <div class="accessibility-controls">
@@ -44,7 +46,30 @@
     </header>
 
     <main>
-        <div class="carousel" role="region">
+        <a id="main"></a>
+
+        <section class="hero-banner">
+            <div class="overlay"></div>
+
+            <div class="container">
+                <div class="banner-content">
+                    <span role="img" aria-description="Descrição da Imagem"></span>
+
+                    <h1 id="hero-heading">O impossível é somente uma questão de visão</h1>
+
+                    <div class="button-group">
+                        <a href="#doacao" class="btn btn-donate">Faça sua doação
+                            agora</a>
+                        <a href="#voluntario" class="btn btn-volunteer">Seja um
+                            voluntário</a>
+                        <a href="#participar" class="btn btn-participate">Quero
+                            Participar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="carousel" role="region">
             <div class="carousel-container">
                 <figure class="carousel-slide">
                     <img src="ciclismo.jpg" alt="Ciclistas competindo em uma corrida">
@@ -77,7 +102,7 @@
                 <button class="carousel-prev" aria-label="Imagem anterior">&lt;</button>
                 <button class="carousel-next" aria-label="Próxima imagem">&gt;</button>
             </div>
-        </div>
+        </section>
     </main>
 
     <script src="assets/js/carousel.js"></script>
