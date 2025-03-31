@@ -10,6 +10,8 @@
     --secondary-color: #ffffff;
     --tertiary-color: #00CED1;
     --fourth-color: #FF7F00;
+    --primary-font: 'Roboto', sans-serif;
+    --secondary-font: 'Montserrat', sans-serif;
 }
 
 html,
@@ -23,6 +25,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    font-family: var(--primary-font);
     font-size: 1rem;
     background: var(--secondary-color);
     color: var(--primary-color);
@@ -53,6 +56,8 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: var(--secondary-font);
+    font-weight: 700;
     line-height: 1.2;
 }
 
@@ -170,7 +175,8 @@ button,
     display: inline-block;
     padding: 12px 20px;
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: 500;
+    text-transform: uppercase;
     text-align: center;
     border-radius: 5px;
     text-decoration: none;
