@@ -186,3 +186,71 @@ button,
 .btn:hover {
     opacity: 0.8;
 }
+
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100vw;
+    background-color: var(--tertiary-color);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+@media all and (min-width: 1200px) {
+    .site-footer {
+        align-items: center;
+    }
+}
+
+.footer-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+@media all and (min-width: 1200px) {
+    .footer-wrap {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+.footer-rights {
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+    transition: 0.3s;
+}
+
+.footer-social a:hover img {
+    opacity: 0.7;
+}
+
+.footer-contact {
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+}
+
+.footer-dev a {
+    color: var(--fourth-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-dev a:hover {
+    text-decoration: underline;
+}
