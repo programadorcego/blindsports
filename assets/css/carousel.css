@@ -22,14 +22,12 @@
 @media all and (min-width: 1200px) {
     .carousel-container {
         width: 800px;
+        margin: 0 auto;
     }
 }
 
 .carousel-slide {
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
     visibility: hidden;
     height: 0;
     transition: opacity 0.8s ease-in-out;
@@ -37,7 +35,7 @@
 
 .carousel-slide.active {
     visibility: visible;
-    height: auto;
+    height: inherit;
     opacity: 1;
 }
 

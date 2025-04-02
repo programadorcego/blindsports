@@ -16,7 +16,7 @@
 
 html,
 body {
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
 }
 
@@ -45,9 +45,20 @@ body {
 }
 
 .img-fluid {
-    display: inline-block;
     max-width: 100%;
     height: auto;
+}
+
+.sr-only {
+    display: inline-block;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
 }
 
 h1,
@@ -90,6 +101,7 @@ h6 {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    position: relative;
 }
 
 @media all and (min-width: 1200px) {
@@ -112,12 +124,39 @@ h6 {
     }
 }
 
+.header-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+@media all and (min-width: 1200px) {
+    .header-top {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px
+    }
+
+    .main-logo {
+        order: 1;
+    }
+
+    .accessibility-controls {
+        display: flex;
+        flex-direction: row;
+        order: 2;
+    }
+}
+
 .main-menu {
     font-size: 1.25rem;
     background-color: var(--tertiary-color);
 }
 
 .main-menu .menu-wrap {
+    width: 100%;
     max-height: 0;
     overflow: hidden;
     visibility: hidden;
@@ -130,12 +169,12 @@ h6 {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 20px;
+    width: 100%;
 }
 
 @media all and (min-width: 1200px) {
     .main-menu {
-        font-size: 1.125rem;
+        font-size: 1rem;
     }
 
     .main-menu .menu-wrap {
@@ -151,7 +190,6 @@ h6 {
     .main-menu ul {
         flex-direction: row;
         flex-wrap: wrap;
-        width: 100%;
     }
 
     .main-menu li {
@@ -169,6 +207,11 @@ button,
 .main-menu .active>a,
 .main-menu a:hover {
     background-color: var(--fourth-color);
+}
+
+main {
+    width: 100vw;
+    flex: 1;
 }
 
 .btn {
@@ -193,12 +236,12 @@ button,
     justify-content: flex-start;
     align-items: flex-start;
     width: 100vw;
-    background-color: var(--tertiary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     padding: 20px 0;
     text-align: center;
     font-size: 0.875rem;
 }
-
 @media all and (min-width: 1200px) {
     .site-footer {
         align-items: center;
@@ -206,23 +249,29 @@ button,
 }
 
 .footer-wrap {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
     padding: 10px;
 }
-
 @media all and (min-width: 1200px) {
     .footer-wrap {
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
     }
 }
 
 .footer-rights {
-    flex: 1 1 100%;
     margin-bottom: 10px;
+}
+@media all and (min-width: 1200px) {
+    .footer-rights {
+        flex: 1 1 100%;
+    }
 }
 
 .footer-social a {
@@ -241,8 +290,12 @@ button,
 }
 
 .footer-contact {
-    flex: 1 1 100%;
     margin-bottom: 10px;
+}
+@media all and (min-width: 1200px) {
+    .footer-contact {
+        flex: 1 1 100%;
+    }
 }
 
 .footer-dev a {

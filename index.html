@@ -18,18 +18,20 @@
 </head>
 
 <body>
-    <span class="sr-only"><a href="#main">Pular para o conteúdo principal</a></span>
+    <span class="sr-only"><a href="#main" id="site-top">Pular para o conteúdo principal</a></span>
     <header class="main-header">
         <div class="container">
-            <div class="accessibility-controls">
-                <button class="btn increase-font-size">Aumentar Foonte</button>
-                <button class="btn decrease-font-size">Diminuir Fonte</button>
-                <button class="btn set-high-contrast">Alto Contraste</button>
-                <button class="btn reset">Resetar</button>
-            </div>
-            <div class="main-logo">
-                <a href=""><img src="images/logo.png"
-                        alt="Logo em fundo preto com o texto ‘BLIND SPORTS’ em letras brancas na parte superior. Abaixo, duas silhuetas estilizadas: à esquerda, uma pessoa de patins em cor laranja usando uma bengala; à direita, uma pessoa em azul turquesa sobre um skate, também segurando uma bengala."></a>
+            <div class="header-top">
+                <div class="accessibility-controls">
+                    <button class="btn increase-font-size">Aumentar Fonte</button>
+                    <button class="btn decrease-font-size">Diminuir Fonte</button>
+                    <button class="btn set-high-contrast">Alto Contraste</button>
+                    <button class="btn reset">Resetar</button>
+                </div>
+                <div class="main-logo">
+                    <a href=""><img src="images/logo.png"
+                            alt="Logo em fundo preto com o texto &quot;BLIND SPORTS&quot; em letras brancas na parte superior. Abaixo, duas silhuetas estilizadas: à esquerda, uma pessoa de patins em cor laranja usando uma bengala; à direita, uma pessoa em azul turquesa sobre um skate, também segurando uma bengala."></a>
+                </div>
             </div>
         </div>
 
@@ -54,6 +56,50 @@
     <main>
         <a id="main"></a>
 
+        <section class="carousel" role="region">
+            <div class="container">
+                <div class="carousel-container">
+                    <figure class="carousel-slide">
+                        <img src="images/demo/ciclismo.jpg" alt="Um grupo de oito ciclistas está posando para uma foto à noite em frente ao Estádio Municipal Paulo Machado de Carvalho, também conhecido como Estádio do Pacaembu, em São Paulo. Todos estão usando capacetes e roupas esportivas. A maioria veste camisetas pretas com detalhes em vermelho e a inscrição &quot;Blind Sports&quot; junto com um logotipo que parece representar esportes para pessoas com deficiência visual. Há uma bicicleta tandem (dupla) na frente do grupo, indicando que eles podem estar
+                        participando de uma atividade inclusiva. As luzes do estádio estão acesas, iluminando a cena. Há
+                        também um sinal de trânsito ao fundo, indicando restrições de estacionamento."
+                            class="img-fluid">
+
+                        <figcaption class="slide-caption" aria-live="polite">
+                            🚴 Apoie nossos ciclistas! Doe ou seja voluntário.
+                        </figcaption>
+                    </figure>
+
+                    <figure class="carousel-slide">
+                        <img src="images/demo/skate.jpg"
+                            alt="Duas imagens lado a lado mostram uma mulher andando de skate em um espaço aberto. Ela está usando um capacete branco, jaqueta preta e calças com estampa geométrica. Em ambas as imagens, um homem está ao lado dela, aparentemente ajudando-a a se equilibrar. O homem veste um agasalho preto com detalhes em azul claro. No fundo, há árvores e um painel com várias imagens e textos. A cena parece ocorrer em um local público, possivelmente um parque ou praça."
+                            class="img-fluid">
+
+                        <figcaption class="slide-caption">
+                            🛹 O skate transforma vidas! Participe como voluntário.
+                        </figcaption>
+                    </figure>
+
+                    <figure class="carousel-slide">
+                        <img src="images/demo/patinacao.jpg"
+                            alt="Um grande grupo de pessoas está reunido ao ar livre em um dia ensolarado. A maioria delas está usando patins e roupas esportivas, algumas em tons de laranja. Muitas pessoas estão levantando as mãos, parecendo animadas e felizes. No chão, à frente do grupo, há alguns cartazes coloridos. Ao fundo, há árvores e um edifício branco. O céu está azul e sem nuvens, sugerindo um clima agradável. Parece ser um evento ou encontro de patinadores."
+                            class="img-fluid">
+
+                        <ficaption class="slide-caption">
+                            ⛸️ A patinação também é inclusão! Ajude a crescer.
+                        </ficaption>
+                    </figure>
+
+                    <span class="accessible-caption" aria-live="polite"></span>
+                </div>
+
+                <div class="carousel-controls">
+                    <button class="btn carousel-prev" aria-label="Imagem anterior">&lt;</button>
+                    <button class="btn carousel-next" aria-label="Próxima imagem">&gt;</button>
+                </div>
+            </div>
+        </section>
+
         <section class="hero-banner">
             <div class="overlay"></div>
 
@@ -61,7 +107,7 @@
                 <div class="banner-content">
                     <span role="img" aria-description="Descrição da Imagem"></span>
 
-                    <h1 id="hero-heading">O impossível é somente uma questão de visão</h1>
+                    <h1 id="hero-heading">O impossível é só uma questão de visão</h1>
 
                     <div class="button-group">
                         <a href="#doacao" class="btn btn-donate">Faça sua doação
@@ -75,43 +121,10 @@
             </div>
         </section>
 
-        <section class="carousel" role="region">
-            <div class="carousel-container">
-                <figure class="carousel-slide">
-                    <img src="images/demo/ciclismo.jpg" alt="Um grupo de oito ciclistas está posando para uma foto à noite em frente ao Estádio Municipal Paulo Machado de Carvalho, também conhecido como Estádio do Pacaembu, em São Paulo. Todos estão usando capacetes e roupas esportivas. A maioria veste camisetas pretas com detalhes em vermelho e a inscrição "Blind Sports" junto com um logotipo que parece representar esportes para pessoas com deficiência visual. Há uma bicicleta tandem (dupla) na frente do grupo, indicando que eles podem estar participando de uma atividade inclusiva. As luzes do estádio estão acesas, iluminando a cena. Há também um sinal de trânsito ao fundo, indicando restrições de estacionamento.">
-
-                    <figcaption class="slide-caption" aria-live="polite">
-                        🚴 Apoie nossos ciclistas! Doe ou seja voluntário.
-                    </figcaption>
-                </figure>
-
-                <figure class="carousel-slide">
-                    <img src="images/demo/skate.jpg" alt="Duas imagens lado a lado mostram uma mulher andando de skate em um espaço aberto. Ela está usando um capacete branco, jaqueta preta e calças com estampa geométrica. Em ambas as imagens, um homem está ao lado dela, aparentemente ajudando-a a se equilibrar. O homem veste um agasalho preto com detalhes em azul claro. No fundo, há árvores e um painel com várias imagens e textos. A cena parece ocorrer em um local público, possivelmente um parque ou praça." class="img-fluid">
-
-                    <figcaption class="slide-caption">
-                        🛹 O skate transforma vidas! Participe como voluntário.
-                    </figcaption>
-                </figure>
-
-                <figure class="carousel-slide">
-                    <img src="images/demo/patinacao.jpg" alt="Um grande grupo de pessoas está reunido ao ar livre em um dia ensolarado. A maioria delas está usando patins e roupas esportivas, algumas em tons de laranja. Muitas pessoas estão levantando as mãos, parecendo animadas e felizes. No chão, à frente do grupo, há alguns cartazes coloridos. Ao fundo, há árvores e um edifício branco. O céu está azul e sem nuvens, sugerindo um clima agradável. Parece ser um evento ou encontro de patinadores." class="img-fluid">
-
-                    <ficaption class="slide-caption">
-                        ⛸️ A patinação também é inclusão! Ajude a crescer.
-                    </ficaption>
-                </figure>
-
-                <span class="accessible-caption" aria-live="polite"></span>
-            </div>
-
-            <div class="carousel-controls">
-                <button class="btn carousel-prev" aria-label="Imagem anterior">&lt;</button>
-                <button class="btn carousel-next" aria-label="Próxima imagem">&gt;</button>
-            </div>
-        </section>
+        <span class="sr-only"><a href="#site-top">Voltar para o topo</a></span>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer" aria-label="Rodapé">
         <div class="container">
             <div class="footer-wrap">
                 <p class="footer-rights">&copy; 2025 - Todos os direitos reservados.</p>

@@ -15,7 +15,7 @@
     .hero-banner {
         justify-content: center;
 align-items: center;
-height: 500px;
+min-height: 500px;
     }
 }
 
@@ -31,7 +31,7 @@ height: 500px;
 .banner-content {
     position: relative;
     padding: 20px;
-    z-index: 2;
+    z-index: 1;
 }
 
 .banner-content h1 {
@@ -42,6 +42,7 @@ height: 500px;
 
 .button-group {
     display: flex;
+    width: 100%;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
