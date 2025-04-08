@@ -71,6 +71,7 @@ h6 {
     font-family: var(--secondary-font);
     font-weight: 700;
     line-height: 1.2;
+    margin 0 15px;
 }
 
 h1 {
@@ -132,6 +133,11 @@ h6 {
     align-items: flex-start;
     width: 100%;
 }
+
+.accessibility-controls {
+    display: flex;
+    flex-direction: column;
+}
 @media all and (min-width: 1200px) {
     .header-top {
         flex-direction: row;
@@ -146,7 +152,6 @@ h6 {
     }
 
     .accessibility-controls {
-        display: flex;
         flex-direction: row;
         order: 2;
     }
@@ -246,6 +251,23 @@ main {
 
 .btn:hover {
     opacity: 0.8;
+}
+
+.inner-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+@media all and (min-width: 1200px) {
+    .inner-section {
+        align-items: center;
+    }
+}
+
+.text-block {
+    width: 100%;
+    margin-bottom: 15px;;
 }
 
 .site-footer {
