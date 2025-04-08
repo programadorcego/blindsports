@@ -21,7 +21,7 @@
 
 @media all and (min-width: 1200px) {
     .carousel-container {
-        width: 800px;
+        width: 400px;
         margin: 0 auto;
     }
 }

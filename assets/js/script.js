@@ -8,13 +8,39 @@ toggleMenu.addEventListener('click', e => {
     let visibility = 'hidden';
     btn.ariaExpanded = toggled;
 
-    if(toggled) {
+    if (toggled) {
         maxHeight = document.querySelector('.menu-wrap').scrollHeight;
         visibility = 'visible';
     }
 
     document.querySelector('.menu-wrap').style.visibility = visibility;
     document.querySelector('.menu-wrap').style.maxHeight = `${maxHeight}px`;
+});
+
+const submenus = document.querySelectorAll('.dropdown');
+
+submenus.forEach(submenu => {
+    submenu.querySelector('a').addEventListener('click', e => {
+        e.preventDefault();
+
+        const link = e.target;
+        const dropdownMenu = link.parentNode.querySelector('.dropdown-menu');
+        let visibility = 'hidden';
+        let maxHeight = 0;
+
+        link.classList.toggle('expanded');
+        let toggled = link.classList.contains('expanded');
+
+        link.ariaExpanded = toggled;
+
+        if (toggled) {
+            maxHeight = `${dropdownMenu.scrollHeight}px`;
+            visibility = 'visible';
+        }
+
+        dropdownMenu.style.visibility = visibility;
+        dropdownMenu.style.maxHeight = `${maxHeight}`;
+    });
 });
 
 const root = document.querySelector(':root');
@@ -24,10 +50,10 @@ root.style.fontSize = `${fontRootSize}px`;
 
 let highContrast = !!localStorage.getItem('high-contrast');
 
-if(highContrast) document.body.classList.add('high-contrast');
+if (highContrast) document.body.classList.add('high-contrast');
 
 document.querySelector('.increase-font-size').addEventListener('click', () => {
-    if(fontRootSize < 32) {
+    if (fontRootSize < 32) {
         fontRootSize += 2;
         localStorage.setItem('fontRootSize', fontRootSize);
     }
@@ -36,7 +62,7 @@ document.querySelector('.increase-font-size').addEventListener('click', () => {
 });
 
 document.querySelector('.decrease-font-size').addEventListener('click', () => {
-    if(fontRootSize > 16) {
+    if (fontRootSize > 16) {
         fontRootSize -= 2;
         localStorage.setItem('fontRootSize', fontRootSize);
     }
@@ -59,8 +85,8 @@ document.querySelector('.reset').addEventListener('click', () => {
 document.querySelector('.set-high-contrast').addEventListener('click', () => {
     highContrast = !highContrast;
     localStorage.setItem('high-contrast', highContrast)
-    
-    if(!highContrast) localStorage.removeItem('high-contrast');
+
+    if (!highContrast) localStorage.removeItem('high-contrast');
 
     document.body.classList.toggle('high-contrast');
 });
