@@ -138,6 +138,11 @@ h6 {
     display: flex;
     flex-direction: column;
 }
+
+.main-header {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
 @media all and (min-width: 1200px) {
     .header-top {
         flex-direction: row;
